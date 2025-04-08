@@ -44,7 +44,7 @@ TL;DR: My suggested navbar would be
 - 1 row of Logo, navlinks that some of them have dropdown menu
 - the architecture would be
 
-<Nav left>
+Nav left:
 
 - Logo
 - About Us (optional, can be on footer)
@@ -59,8 +59,9 @@ TL;DR: My suggested navbar would be
 - All products
 - Articles
 
-<Nav right> 
-+ Search Icon 
-+ Language icon & country name 
-+ Sign in icon & label 
-+ Cart icon & label
+Nav right:
+
+- Search Icon
+- Language icon & country name
+- Sign in icon & label
+- Cart icon & label
