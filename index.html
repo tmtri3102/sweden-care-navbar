@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SwedenCare</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 20px;
+        background-color: white;
+        border: 2px solid #e0e0ff;
+        border-radius: 5px;
+        max-width: 1440px;
+        margin: 10px auto;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+      }
+
+      .nav-links {
+        display: flex;
+        list-style: none;
+        margin-left: 20px;
+      }
+
+      .nav-item {
+        margin: 0 15px;
+        position: relative;
+      }
+
+      .nav-item a {
+        text-decoration: none;
+        color: #333;
+        font-size: 16px;
+        font-weight: 500;
+        transition: color 0.3s;
+      }
+
+      .nav-item a:hover {
+        color: #1a73e8;
+      }
+
+      .dropdown-icon {
+        font-size: 12px;
+        margin-left: 5px;
+      }
+
+      .actions {
+        display: flex;
+        align-items: center;
+      }
+
+      .search-box {
+        position: relative;
+        margin-right: 15px;
+      }
+
+      .search-box input {
+        padding: 8px 30px 8px 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        outline: none;
+      }
+
+      .search-icon {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #666;
+      }
+
+      .country-selector {
+        display: flex;
+        align-items: center;
+        margin-right: 15px;
+        cursor: pointer;
+      }
+
+      .flag {
+        margin-right: 5px;
+        font-size: 16px;
+      }
+
+      .sign-in,
+      .cart {
+        margin-left: 15px;
+        text-decoration: none;
+        color: #333;
+        display: flex;
+        align-items: center;
+      }
+
+      .cart-count {
+        background-color: #f0f0f0;
+        border-radius: 50%;
+        padding: 0 6px;
+        margin-left: 5px;
+        font-size: 14px;
+      }
+
+      /* Responsive styling */
+      @media (max-width: 768px) {
+        .navbar {
+          flex-wrap: wrap;
+        }
+
+        .nav-links {
+          order: 3;
+          width: 100%;
+          margin-top: 15px;
+          justify-content: space-between;
+        }
+
+        .actions {
+          flex-grow: 1;
+          justify-content: flex-end;
+        }
+
+        .search-box input {
+          width: 120px;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .nav-item {
+          margin: 0 8px;
+        }
+
+        .search-box {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">
+        <div>SWEDEN CARE</span></div>
+      </div>
+
+      <ul class="nav-links">
+        <li class="nav-item">
+          <a href="#"
+            >About Us <i class="fas fa-chevron-down dropdown-icon"></i
+          ></a>
+        </li>
+        <li class="nav-item">
+          <a href="#">For Dogs</a>
+        </li>
+        <li class="nav-item">
+          <a href="#">For Cats</a>
+        </li>
+        <li class="nav-item">
+          <a href="#"
+            >All Products <i class="fas fa-chevron-down dropdown-icon"></i
+          ></a>
+        </li>
+      </ul>
+
+      <div class="actions">
+        <div class="search-box">
+          <input type="text" placeholder="Search..." />
+          <i class="fas fa-search search-icon"></i>
+        </div>
+
+        <div class="country-selector">
+          <span class="flag">🇺🇸</span>
+          <span>United States</span>
+        </div>
+
+        <a href="#" class="sign-in"> <i class="fas fa-user"></i> Sign In </a>
+
+        <a href="#" class="cart">
+          <i class="fas fa-shopping-cart"></i> Cart
+          <span class="cart-count">0</span>
+        </a>
+      </div>
+    </nav>
+  </body>
+</html>
