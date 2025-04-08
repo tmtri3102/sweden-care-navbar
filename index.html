@@ -8,158 +8,26 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: Arial, sans-serif;
-      }
-
-      .navbar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 15px 20px;
-        background-color: white;
-        border: 2px solid #e0e0ff;
-        border-radius: 5px;
-        max-width: 1440px;
-        margin: 10px auto;
-      }
-
-      .logo {
-        display: flex;
-        align-items: center;
-      }
-
-      .nav-links {
-        display: flex;
-        list-style: none;
-        margin-left: 20px;
-      }
-
-      .nav-item {
-        margin: 0 15px;
-        position: relative;
-      }
-
-      .nav-item a {
-        text-decoration: none;
-        color: #333;
-        font-size: 16px;
-        font-weight: 500;
-        transition: color 0.3s;
-      }
-
-      .nav-item a:hover {
-        color: #1a73e8;
-      }
-
-      .dropdown-icon {
-        font-size: 12px;
-        margin-left: 5px;
-      }
-
-      .actions {
-        display: flex;
-        align-items: center;
-      }
-
-      .search-box {
-        position: relative;
-        margin-right: 15px;
-      }
-
-      .search-box input {
-        padding: 8px 30px 8px 10px;
-        border: 1px solid #ddd;
-        border-radius: 4px;
-        outline: none;
-      }
-
-      .search-icon {
-        position: absolute;
-        right: 10px;
-        top: 50%;
-        transform: translateY(-50%);
-        color: #666;
-      }
-
-      .country-selector {
-        display: flex;
-        align-items: center;
-        margin-right: 15px;
-        cursor: pointer;
-      }
-
-      .flag {
-        margin-right: 5px;
-        font-size: 16px;
-      }
-
-      .sign-in,
-      .cart {
-        margin-left: 15px;
-        text-decoration: none;
-        color: #333;
-        display: flex;
-        align-items: center;
-      }
-
-      .cart-count {
-        background-color: #f0f0f0;
-        border-radius: 50%;
-        padding: 0 6px;
-        margin-left: 5px;
-        font-size: 14px;
-      }
-
-      /* Responsive styling */
-      @media (max-width: 768px) {
-        .navbar {
-          flex-wrap: wrap;
-        }
-
-        .nav-links {
-          order: 3;
-          width: 100%;
-          margin-top: 15px;
-          justify-content: space-between;
-        }
-
-        .actions {
-          flex-grow: 1;
-          justify-content: flex-end;
-        }
-
-        .search-box input {
-          width: 120px;
-        }
-      }
-
-      @media (max-width: 576px) {
-        .nav-item {
-          margin: 0 8px;
-        }
-
-        .search-box {
-          display: none;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <nav class="navbar">
-      <div class="logo">
-        <div>SWEDEN CARE</span></div>
-      </div>
-
-      <ul class="nav-links">
-        <li class="nav-item">
-          <a href="#"
+      <ul class="nav-left">
+        <li>
+          <a href="#">
+            <img src="sweden-care.jpeg" alt="SwedenCare Logo" height="36px" />
+          </a>
+        </li>
+        <li class="nav-item dropdown">
+          <a href="#" class="dropbtn"
             >About Us <i class="fas fa-chevron-down dropdown-icon"></i
           ></a>
+          <div class="dropdown-content">
+            <a href="#">Our Story</a>
+            <a href="#">Sustainability</a>
+            <a href="#">For investors</a>
+            <a href="#">Contact Us</a>
+          </div>
         </li>
         <li class="nav-item">
           <a href="#">For Dogs</a>
@@ -168,30 +36,36 @@
           <a href="#">For Cats</a>
         </li>
         <li class="nav-item">
-          <a href="#"
-            >All Products <i class="fas fa-chevron-down dropdown-icon"></i
-          ></a>
+          <a href="#">All Products</a>
+        </li>
+        <li class="nav-item">
+          <a href="#">Articles</a>
         </li>
       </ul>
 
-      <div class="actions">
-        <div class="search-box">
-          <input type="text" placeholder="Search..." />
+      <ul class="nav-right">
+        <li class="nav-item search-box">
           <i class="fas fa-search search-icon"></i>
-        </div>
+        </li>
 
-        <div class="country-selector">
-          <span class="flag">🇺🇸</span>
-          <span>United States</span>
-        </div>
+        <li class="nav-item country-selector">
+          <span>🇺🇸 United States</span>
+        </li>
 
-        <a href="#" class="sign-in"> <i class="fas fa-user"></i> Sign In </a>
+        <li class="nav-item sign-in">
+          <a href="#"><i class="fas fa-user"></i> Sign In</a>
+        </li>
 
-        <a href="#" class="cart">
-          <i class="fas fa-shopping-cart"></i> Cart
-          <span class="cart-count">0</span>
-        </a>
-      </div>
+        <li class="nav-item cart">
+          <a href="#"><i class="fas fa-shopping-cart"></i> Cart (0)</a>
+        </li>
+      </ul>
     </nav>
   </body>
+  <script>
+    document.querySelector(".hamburger").addEventListener("click", function () {
+      document.querySelector(".nav-left").classList.toggle("active");
+      document.querySelector(".nav-right").classList.toggle("active");
+    });
+  </script>
 </html>
